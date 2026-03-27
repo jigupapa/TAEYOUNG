@@ -36,12 +36,12 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  color: var(--text-primary);
+  color: var(--navy);
 }
 
 .philosophy-desc, .policy-head-desc {
   font-size: 15px;
-  color: var(--text-secondary);
+  color: var(--navy);
   line-height: 1.85;
   font-weight: 300;
 }
@@ -108,7 +108,7 @@
 
 .phil-desc, .policy-desc {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--navy);
   line-height: 1.8;
   font-weight: 300;
 }
