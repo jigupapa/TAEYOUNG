@@ -1,0 +1,222 @@
+.philosophy, .policy {
+  padding: 120px 80px;
+  background: var(--gray-100);
+}
+
+.philosophy-inner, .policy-inner  {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.philosophy-header, .policy-header  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 64px;
+  align-items: end;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-eyebrow span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.philosophy-heading, .policy-heading {
+  font-size: clamp(32px, 3vw, 44px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.philosophy-desc, .policy-head-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+.philosophy-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+}
+
+.phil-card {
+  background: var(--white);
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.phil-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.phil-card:hover::after, .policy-card:hover::after { transform: scaleX(1); }
+
+.phil-num, .policy-num  {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--gray-400);
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.phil-hanja {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.phil-name {
+  font-size: 11px;
+  color: var(--red);
+  letter-spacing: 0.25em;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.phil-divider {
+  width: 16px; height: 1px;
+  background: var(--gray-200);
+  margin-bottom: 20px;
+}
+
+.phil-desc, .policy-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.phil-bg-char {
+  position: absolute;
+  bottom: -8px; right: -4px;
+  font-size: 100px;
+  font-weight: 700;
+  color: var(--navy);
+  opacity: 0.03;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.policy-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+}
+
+.policy-card {
+  background: var(--white);
+  padding: 44px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.policy-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.policy-name {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.policy-desc::before {
+  content: '';
+  display: inline-block;
+  width: 5px; /* 동그라미 크기 */
+  height: 5px;
+  background-color: var(--red);
+  border-radius: 50%; /* 완벽한 원으로 만들기 */
+  margin-right: 6px; /* 동그라미와 글자 사이의 간격 */
+}
+
+/* ── 반응형 ── */
+
+/* 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .philosophy, .policy {
+    padding: 80px 40px;
+  }
+
+  .philosophy-header, .policy-header {
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .philosophy-cards {
+    grid-template-columns: repeat(2, 1fr); /* 4개 → 2열 */
+  }
+
+  .policy-cards {
+    grid-template-columns: repeat(2, 1fr); /* 3개 → 2열 */
+  }
+}
+
+/* 모바일 (768px) */
+@media (max-width: 768px) {
+  .philosophy, .policy {
+    padding: 60px 24px;
+  }
+
+  .philosophy-header, .policy-header {
+    grid-template-columns: 1fr; /* 2열 → 1열 */
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .philosophy-cards {
+    grid-template-columns: 1fr; /* 1열 */
+  }
+
+  .policy-cards {
+    grid-template-columns: 1fr; /* 1열 */
+  }
+
+  .phil-card, .policy-card {
+    padding: 32px 24px;
+  }
+
+  .phil-hanja, .policy-name {
+    font-size: 36px;
+  }
+}

@@ -2,6 +2,8 @@
     font-family: 'CompanyFont';
     src: url('/font/Pretendard-Regular.otf') format('opentype');
 }
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 :root {
     --navy:      rgb(44,59,82);
     --navy-mid:  #1C3157;
@@ -9,7 +11,7 @@
     --accent:    #4A8FD4;
     --accent2:   #6FB3E8;
     --silver:    rgb(130,130,130);
-    --light:     #EEF2F8;
+    --light:     rgb(220,220,220);
     --white:     #FFFFFF;
     --text-dark: #0D1B2E;
     --text-mid:  #3D5478;
