@@ -9,8 +9,12 @@
     margin: auto;
 }
 
-.tit_box p{
+.tit_box {
     text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.tit_box p{
     margin-bottom: 1.5rem;
     font-size: 25px;
     font-weight: 600;
