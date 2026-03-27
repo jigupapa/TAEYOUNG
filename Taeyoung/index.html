@@ -6,7 +6,7 @@
   <title>태영운수 — 안전하고 편안한 이동</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/reset.css">
 </head>
   <body>
@@ -62,10 +62,33 @@
         <h1 class="hero-title">매일의 이동을<br><span>더 안전하게</span></h1>
         <p class="hero-desc">태영운송그룹은 고객 여러분의 안전하고 편안한 이동을<br>최우선으로 생각합니다.</p>
         <div class="hero-btns">
-          <a href="#routes" class="btn-primary">회사소개</a>
+          <a href="./about.html" class="btn-primary">회사소개</a>
           <a href="#notice" class="btn-outline">공지사항</a>
         </div>
       </div>
+      <div class="hero-slider">
+        <div class="slider-track">
+          <div class="slide active">
+            <img src="./images/main4.jpg" alt="slide1" />
+          </div>
+          <div class="slide">
+            <img src="./images/main2.jpg" alt="slide2" />
+          </div>
+          <div class="slide">
+            <img src="./images/main3.jpg" alt="slide3" />
+          </div>
+        </div>
+        <!-- 화살표 -->
+        <button class="slider-prev">&#8592;</button>
+        <button class="slider-next">&#8594;</button>
+        <!-- 인디케이터 -->
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
       <div class="hero-scroll">
         <span>scroll</span>
         <div class="scroll-line"></div>
@@ -79,33 +102,9 @@
           <h2>공지사항</h2>
           <a href="#" class="more-btn">더보기 +</a>
         </div>
-        <ul class="notice-list">
-          <li class="notice-item new">
-            <span class="badge">공지</span>
-            <a href="#">○○번 노선 임시 운행 변경 안내</a>
-            <span class="date">2025.03.20</span>
-          </li>
-          <li class="notice-item">
-            <span class="badge">공지</span>
-            <a href="#">설 연휴 특별 운행 시간표 안내</a>
-            <span class="date">2025.03.15</span>
-          </li>
-          <li class="notice-item">
-            <span class="badge">안내</span>
-            <a href="#">버스 카드 단말기 교체 작업 안내</a>
-            <span class="date">2025.03.10</span>
-          </li>
-          <li class="notice-item">
-            <span class="badge">안내</span>
-            <a href="#">2025년 상반기 채용 공고</a>
-            <span class="date">2025.03.05</span>
-          </li>
-          <li class="notice-item">
-            <span class="badge">공지</span>
-            <a href="#">차고지 이전에 따른 노선 변경 안내</a>
-            <span class="date">2025.02.28</span>
-          </li>
-        </ul>
+        <div class="section-label">
+           <p>시스템 준비중</p>
+        </div>
       </div>
 
       <div class="info-right" id="routes">
@@ -113,39 +112,8 @@
           <h2>홍보</h2>
           <a href="#" class="more-btn">더보기 +</a>
         </div>
-        <div class="route-grid">
-          <div class="route-card">
-            <div class="route-num">100</div>
-            <div class="route-info">
-              <p class="route-path">○○역 → △△터미널</p>
-              <p class="route-time">첫차 05:30 · 막차 23:00</p>
-            </div>
-            <span class="route-tag">간선</span>
-          </div>
-          <div class="route-card">
-            <div class="route-num">200</div>
-            <div class="route-info">
-              <p class="route-path">□□공원 → ○○역</p>
-              <p class="route-time">첫차 06:00 · 막차 22:30</p>
-            </div>
-            <span class="route-tag">지선</span>
-          </div>
-          <div class="route-card">
-            <div class="route-num">300</div>
-            <div class="route-info">
-              <p class="route-path">△△마을 → ○○시청</p>
-              <p class="route-time">첫차 06:30 · 막차 21:00</p>
-            </div>
-            <span class="route-tag">마을</span>
-          </div>
-          <div class="route-card">
-            <div class="route-num">급행1</div>
-            <div class="route-info">
-              <p class="route-path">○○역 → □□고속터미널</p>
-              <p class="route-time">첫차 05:00 · 막차 23:30</p>
-            </div>
-            <span class="route-tag accent">급행</span>
-          </div>
+        <div class="section-label">
+           <p>시스템 준비중</p>
         </div>
       </div>
     </section>
@@ -182,10 +150,10 @@
         <h2>안전 운행,<br>저희의 약속입니다</h2>
         <p class="safety-desc">태영운송그룹은 매년 전 차량 정기 안전 점검과 기사 안전 교육을 실시하며 고객 여러분의 안전한 이동을 책임집니다.</p>
         <ul class="safety-list">
-          <li>✓ 전 차량 연 2회 정기 안전 점검</li>
-          <li>✓ 기사 월 1회 안전 운전 교육</li>
-          <li>✓ 실시간 차량 위치 모니터링</li>
-          <li>✓ 블랙박스 전 차량 100% 설치</li>
+          <li><span>✓</span> 전 차량 연 2회 정기 안전 점검</li>
+          <li><span>✓</span> 기사 월 1회 안전 운전 교육</li>
+          <li><span>✓</span> 실시간 차량 위치 모니터링</li>
+          <li><span>✓</span> 블랙박스 전 차량 100% 설치</li>
         </ul>
       </div>
       <div class="safety-cards">
@@ -244,6 +212,28 @@
         });
       }, { threshold: 0.1 });
       reveals.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+      document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+      // 자동 슬라이드 (원하지 않으면 삭제)
+      setInterval(() => goTo(current + 1), 4000);
+
     </script>
   </body>
 </html>

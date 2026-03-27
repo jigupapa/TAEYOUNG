@@ -82,6 +82,87 @@
 }
 .btn-outline:hover { border-color: var(--white); color: var(--white); transform: translateY(-2px); }
 
+.hero-slider {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 600px;
+  margin-right: 50px;
+}
+
+.slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.slider-prev { left: 12px; }
+.slider-next { right: 12px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: white;
+}
+
 /* 스크롤 인디케이터 */
 .hero-scroll {
   position: absolute;
@@ -127,59 +208,12 @@
 }
 .more-btn:hover { color: var(--accent); }
 
-/* 공지사항 */
-.notice-list { display: flex; flex-direction: column; }
-.notice-item {
-  display: flex; align-items: center; gap: 10px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 40px); 
 }
-.notice-item:last-child { border-bottom: none; }
-.badge {
-  flex-shrink: 0;
-  font-size: 10px;
-  padding: 2px 7px;
-  border-radius: 3px;
-  background: var(--light);
-  color: var(--text-mid);
-  font-weight: 600;
-}
-.notice-item.new .badge { background: #EBF4FF; color: var(--accent); }
-.notice-item a {
-  flex: 1;
-  font-size: 14px; color: var(--text-dark);
-  text-decoration: none;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  transition: color 0.2s;
-}
-.notice-item a:hover { color: var(--accent); }
-.date { flex-shrink: 0; font-size: 12px; color: var(--text-light); }
-
-/* 노선 카드 */
-.route-grid { display: flex; flex-direction: column; gap: 12px; }
-.route-card {
-  display: flex; align-items: center; gap: 16px;
-  padding: 16px 18px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.route-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(26,111,196,0.1); }
-.route-num {
-  flex-shrink: 0;
-  font-size: 20px; font-weight: 900; color: var(--navy);
-  min-width: 50px;
-}
-.route-info { flex: 1; }
-.route-path { font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
-.route-time { font-size: 12px; color: var(--text-light); }
-.route-tag {
-  flex-shrink: 0;
-  font-size: 11px; font-weight: 600;
-  padding: 4px 10px; border-radius: 20px;
-  background: var(--light); color: var(--text-mid);
-}
-.route-tag.accent { background: #EBF4FF; color: var(--accent); }
 
 /* ── 통계 ── */
 .stats-section {
@@ -222,12 +256,26 @@
   font-size: 15px; color: var(--text-mid);
   line-height: 1.85; margin-bottom: 28px;
 }
-.safety-list { display: flex; flex-direction: column; gap: 12px; }
-.safety-list li {
-  font-size: 14px; color: var(--text-mid);
-  list-style: none; padding-left: 4px;
+.safety-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
 }
 
+.safety-list li {
+  font-size: 14px; 
+  color: var(--text-mid);
+  list-style: none; 
+  padding-left: 4px;
+  display: flex;
+  gap: 8px;
+}
+
+.safety-list li span {
+  flex-shrink: 0; 
+}
 .safety-cards { display: flex; flex-direction: column; gap: 16px; }
 .safety-card {
   display: flex; align-items: center; gap: 18px;
