@@ -138,3 +138,24 @@
   font-size: 12px;
   margin-bottom: 6px;
 }
+
+
+/* ── 반응형 ── */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .business-section {
+    padding: 0px 40px 70px;
+  }
+}
+@media (max-width: 450px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .business-section {
+    padding: 0px 40px 70px;
+  }
+}
