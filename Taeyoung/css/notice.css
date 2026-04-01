@@ -113,6 +113,7 @@
   text-align: left;
 }
 .press-table thead th:first-child { width: 70px; text-align: center; }
+.press-table thead th:nth-child(2){text-align: center;}
 .press-table thead th:last-child  { width: 160px; }
 
 .press-table tbody tr {
