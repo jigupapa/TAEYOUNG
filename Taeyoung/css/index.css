@@ -205,6 +205,9 @@
   font-size: 12px; color: var(--text-light);
   text-decoration: none; font-weight: 500;
   transition: color 0.2s;
+  flex-shrink: 0;      
+  white-space: nowrap; 
+  padding: 4px 8px;   
 }
 .more-btn:hover { color: var(--accent); }
 
@@ -272,26 +275,6 @@
   color: var(--text-light);
   white-space: nowrap;
 }
-
-
-/* ── 통계 ── */
-.stats-section {
-  background: var(--navy);
-  padding: 60px 8%;
-}
-.stats-inner {
-  display: flex; align-items: center; justify-content: center;
-  gap: 0; max-width: 900px; margin: 0 auto;
-}
-.stat-item { flex: 1; text-align: center; padding: 20px; }
-.stat-num {
-  font-size: 48px; font-weight: 900; color: var(--white);
-  line-height: 1;
-  margin-bottom: 10px;
-}
-.stat-num span { font-size: 24px; color: var(--accent2); }
-.stat-label { font-size: 13px; color: var(--silver); letter-spacing: 0.05em; }
-.stat-divider { width: 1px; height: 70px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
 
 /* ── 안전 ── */
 .safety-section {

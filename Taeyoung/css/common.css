@@ -182,7 +182,9 @@
 
   /* ── MOBILE MENU OVERLAY ── */
   .mobile-menu {
-    display: none;
+    display: block;
+    visibility: hidden;
+    pointer-events: none;
     position: fixed;
     top: 70px; /* nav 높이와 맞춤 */
     left: 0; right: 0; bottom: 0;
@@ -194,7 +196,10 @@
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
+
   .mobile-menu.open {
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
     opacity: 1;
   }
@@ -298,9 +303,9 @@
   }
   .hero-sub h1 span { color: var(--accent); }
   .hero-sub p {
-      font-size: 15px;
       color: rgba(255,255,255,0.6);
       line-height: 1.9;
+      font-size: clamp(13px, 3vw, 15px);
   }
 
 
@@ -371,5 +376,5 @@
   @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .mobile-menu { display: block; }
+
 }

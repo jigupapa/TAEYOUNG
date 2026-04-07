@@ -1,5 +1,10 @@
-.philosophy, .policy {
+.philosophy {
   padding: 120px 80px;
+  background: var(--gray-100);
+}
+
+.policy {
+  padding: 80px 80px 120px 80px;
   background: var(--gray-100);
 }
 
@@ -32,24 +37,33 @@
 }
 
 .philosophy-heading, .policy-heading {
-  font-size: clamp(32px, 3vw, 44px);
+  font-size: clamp(35px, 3vw, 48px);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
   color: var(--navy);
 }
 
-.philosophy-desc, .policy-head-desc {
+.policy-head-desc {
   font-size: 15px;
   color: var(--navy);
   line-height: 1.85;
 }
 
-.philosophy-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--gray-200);
+.philosophy-card {
+  font-size: clamp(20px, 3vw, 40px);
+  color: var(--red);
+  text-align: center;
+
+}
+
+.philosophy-desc {
+  display: flex;
+  justify-content: center;  
+  font-size: clamp(13px, 3vw, 20px);
+  padding-top: 20px;
+  color: var(--navy);
+
 }
 
 .phil-card {
@@ -105,7 +119,7 @@
 }
 
 .phil-desc, .policy-desc {
-  font-size: 13px;
+  font-size: clamp(11px, 3vw, 15px);
   color: var(--navy);
   line-height: 1.8;
 }
@@ -121,6 +135,15 @@
   pointer-events: none;
   user-select: none;
 }
+
+/* 구분선 */
+.philosophy-divider {
+    width: 70%;
+    height: 1px;
+    background: rgba(44,59,82,0.08);
+    margin: 120px auto;
+}
+
 
 .policy-cards {
   display: grid;
@@ -149,7 +172,7 @@
 }
 
 .policy-name {
-  font-size: 48px;
+  font-size: clamp(30px, 3vw, 44px);
   font-weight: 700;
   color: var(--navy);
   line-height: 1;
@@ -180,13 +203,10 @@
     margin-bottom: 48px;
   }
 
-  .philosophy-cards {
-    grid-template-columns: repeat(2, 1fr); /* 4개 → 2열 */
-  }
-
   .policy-cards {
     grid-template-columns: repeat(2, 1fr); /* 3개 → 2열 */
   }
+
 }
 
 /* 모바일 (768px) */
@@ -201,10 +221,6 @@
     margin-bottom: 36px;
   }
 
-  .philosophy-cards {
-    grid-template-columns: 1fr; /* 1열 */
-  }
-
   .policy-cards {
     grid-template-columns: 1fr; /* 1열 */
   }
@@ -213,7 +229,9 @@
     padding: 32px 24px;
   }
 
-  .phil-hanja, .policy-name {
-    font-size: 36px;
+  .philosophy-divider{
+    width: 90%;
+    margin: 0px auto;
   }
+
 }
